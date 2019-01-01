@@ -1,0 +1,7 @@
+# Vim
+*~
+*.swp
+*.swo
+
+# Quick test bash script
+p.sh
