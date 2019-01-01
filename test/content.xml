@@ -4,26 +4,49 @@
   <office:font-face-decls>
     <style:font-face style:name="Liberation Sans" svg:font-family="'Liberation Sans'" style:font-family-generic="swiss" style:font-pitch="variable"/>
     <style:font-face style:name="Arial Unicode MS" svg:font-family="'Arial Unicode MS'" style:font-family-generic="system" style:font-pitch="variable"/>
+    <style:font-face style:name="DejaVu Sans" svg:font-family="'DejaVu Sans'" style:font-family-generic="system" style:font-pitch="variable"/>
     <style:font-face style:name="PingFang SC" svg:font-family="'PingFang SC'" style:font-family-generic="system" style:font-pitch="variable"/>
   </office:font-face-decls>
   <office:automatic-styles>
     <style:style style:name="co1" style:family="table-column">
-      <style:table-column-properties fo:break-before="auto" style:column-width="64.01pt"/>
+      <style:table-column-properties fo:break-before="auto" style:column-width="61mm"/>
+    </style:style>
+    <style:style style:name="co2" style:family="table-column">
+      <style:table-column-properties fo:break-before="auto" style:column-width="22.58mm"/>
+    </style:style>
+    <style:style style:name="co3" style:family="table-column">
+      <style:table-column-properties fo:break-before="auto" style:column-width="46.57mm"/>
     </style:style>
     <style:style style:name="ro1" style:family="table-row">
-      <style:table-row-properties style:row-height="12.81pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
+      <style:table-row-properties style:row-height="4.52mm" fo:break-before="auto" style:use-optimal-row-height="true"/>
     </style:style>
     <style:style style:name="ro2" style:family="table-row">
-      <style:table-row-properties style:row-height="23.56pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
+      <style:table-row-properties style:row-height="8.31mm" fo:break-before="auto" style:use-optimal-row-height="true"/>
     </style:style>
     <style:style style:name="ro3" style:family="table-row">
-      <style:table-row-properties style:row-height="79.85pt" fo:break-before="auto" style:use-optimal-row-height="true"/>
+      <style:table-row-properties style:row-height="5.82mm" fo:break-before="auto" style:use-optimal-row-height="false"/>
+    </style:style>
+    <style:style style:name="ro4" style:family="table-row">
+      <style:table-row-properties style:row-height="34.13mm" fo:break-before="auto" style:use-optimal-row-height="false"/>
+    </style:style>
+    <style:style style:name="ro5" style:family="table-row">
+      <style:table-row-properties style:row-height="28.13mm" fo:break-before="auto" style:use-optimal-row-height="true"/>
+    </style:style>
+    <style:style style:name="ro6" style:family="table-row">
+      <style:table-row-properties style:row-height="11.11mm" fo:break-before="auto" style:use-optimal-row-height="true"/>
     </style:style>
     <style:style style:name="ta1" style:family="table" style:master-page-name="Default">
       <style:table-properties table:display="true" style:writing-mode="lr-tb"/>
     </style:style>
+    <style:style style:name="ce1" style:family="table-cell" style:parent-style-name="Default">
+      <style:text-properties fo:font-size="26pt" style:font-size-asian="26pt" style:font-size-complex="26pt"/>
+    </style:style>
+    <style:style style:name="ce2" style:family="table-cell" style:parent-style-name="Default">
+      <style:table-cell-properties fo:border-bottom="0.06pt solid #000000" fo:background-color="#fff200" fo:border-left="none" fo:border-right="none" fo:border-top="none"/>
+      <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+    </style:style>
     <style:style style:name="gr1" style:family="graphic">
-      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="center" draw:textarea-vertical-align="middle" draw:color-mode="standard" draw:luminance="0%" draw:contrast="0%" draw:gamma="100%" draw:red="0%" draw:green="0%" draw:blue="0%" fo:clip="rect(0pt, 0pt, 0pt, 0pt)" draw:image-opacity="100%" style:mirror="none"/>
+      <style:graphic-properties draw:stroke="none" draw:fill="none" draw:textarea-horizontal-align="center" draw:textarea-vertical-align="middle" draw:color-mode="standard" draw:luminance="0%" draw:contrast="0%" draw:gamma="100%" draw:red="0%" draw:green="0%" draw:blue="0%" fo:clip="rect(0mm, 0mm, 0mm, 0mm)" draw:image-opacity="100%" style:mirror="none"/>
     </style:style>
     <style:style style:name="P1" style:family="paragraph">
       <loext:graphic-properties draw:fill="none"/>
@@ -37,15 +60,8 @@
     <office:spreadsheet>
       <table:calculation-settings table:automatic-find-labels="false" table:use-regular-expressions="false" table:use-wildcards="true"/>
       <table:table table:name="Sheet1" table:style-name="ta1">
-        <table:shapes>
-          <draw:frame draw:z-index="1" draw:name="Image 2" draw:style-name="gr1" draw:text-style-name="P1" svg:width="53.46pt" svg:height="31.72pt" svg:x="72.34pt" svg:y="711.55pt">
-            <draw:image xlink:href="Pictures/100001810000075F00000460C104DD74381C8355.svg" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" loext:mime-type="image/svg+xml">
-              <text:p/>
-            </draw:image>
-            <draw:image xlink:href="Pictures/100002010000005F00000038CFFC1390297C9482.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" loext:mime-type="image/png"/>
-          </draw:frame>
-        </table:shapes>
-        <table:table-column table:style-name="co1" table:number-columns-repeated="5" table:default-cell-style-name="Default"/>
+        <table:table-column table:style-name="co1" table:default-cell-style-name="Default"/>
+        <table:table-column table:style-name="co2" table:number-columns-repeated="4" table:default-cell-style-name="Default"/>
         <table:table-row table:style-name="ro1">
           <table:table-cell office:value-type="string" calcext:value-type="string">
             <text:p>A1</text:p>
@@ -120,13 +136,13 @@
             <text:p>my friend :-)</text:p>
           </table:table-cell>
         </table:table-row>
-        <table:table-row table:style-name="ro1">
+        <table:table-row table:style-name="ro3">
           <table:table-cell table:number-columns-repeated="5"/>
         </table:table-row>
-        <table:table-row table:style-name="ro1">
+        <table:table-row table:style-name="ro4">
           <table:table-cell>
-            <draw:frame draw:z-index="0" draw:name="Image 1" draw:style-name="gr1" draw:text-style-name="P1" svg:width="364.9pt" svg:height="546.89pt" svg:x="0pt" svg:y="0.03pt">
-              <draw:image xlink:href="Pictures/100000000000016D000002239004DB26F9D78EC7.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad" loext:mime-type="image/png">
+            <draw:frame table:end-cell-address="Sheet1.A8" table:end-x="60.8mm" table:end-y="0.1mm" draw:z-index="0" draw:name="Image 1" draw:style-name="gr1" draw:text-style-name="P1" svg:width="60.8mm" svg:height="34.21mm" svg:x="0mm" svg:y="0.02mm">
+              <draw:image xlink:href="Pictures/100000000000016D000002236270053086F1708E.png" xlink:type="simple" xlink:show="embed" xlink:actuate="onLoad">
                 <text:p/>
               </draw:image>
             </draw:frame>
@@ -136,7 +152,7 @@
         <table:table-row table:style-name="ro1" table:number-rows-repeated="44">
           <table:table-cell table:number-columns-repeated="5"/>
         </table:table-row>
-        <table:table-row table:style-name="ro3">
+        <table:table-row table:style-name="ro5">
           <table:table-cell office:value-type="string" calcext:value-type="string">
             <text:p>Well, isn’t that interesting, I didn’t expect anything like this</text:p>
             <text:p/>
@@ -147,6 +163,104 @@
             <text:p>TEST</text:p>
           </table:table-cell>
           <table:table-cell table:number-columns-repeated="4"/>
+        </table:table-row>
+      </table:table>
+      <table:table table:name="Blad2" table:style-name="ta1">
+        <table:table-column table:style-name="co2" table:number-columns-repeated="2" table:default-cell-style-name="Default"/>
+        <table:table-column table:style-name="co3" table:default-cell-style-name="Default"/>
+        <table:table-column table:style-name="co2" table:number-columns-repeated="6" table:default-cell-style-name="Default"/>
+        <table:table-row table:style-name="ro6">
+          <table:table-cell table:style-name="ce1" office:value-type="string" calcext:value-type="string">
+            <text:p>Example with a header row</text:p>
+          </table:table-cell>
+          <table:table-cell table:number-columns-repeated="8"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell table:number-columns-repeated="9"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+            <text:p>id</text:p>
+          </table:table-cell>
+          <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+            <text:p>animal</text:p>
+          </table:table-cell>
+          <table:table-cell table:style-name="ce2" office:value-type="string" calcext:value-type="string">
+            <text:p>awesomeness multiplier</text:p>
+          </table:table-cell>
+          <table:table-cell table:style-name="ce2" table:number-columns-repeated="6"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell office:value-type="float" office:value="1" calcext:value-type="float">
+            <text:p>1</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="string" calcext:value-type="string">
+            <text:p>cat</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="float" office:value="1" calcext:value-type="float">
+            <text:p>1</text:p>
+          </table:table-cell>
+          <table:table-cell table:number-columns-repeated="6"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell office:value-type="float" office:value="2" calcext:value-type="float">
+            <text:p>2</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="string" calcext:value-type="string">
+            <text:p>dog</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="float" office:value="1" calcext:value-type="float">
+            <text:p>1</text:p>
+          </table:table-cell>
+          <table:table-cell table:number-columns-repeated="6"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell office:value-type="float" office:value="3" calcext:value-type="float">
+            <text:p>3</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="string" calcext:value-type="string">
+            <text:p>cow</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="float" office:value="2" calcext:value-type="float">
+            <text:p>2</text:p>
+          </table:table-cell>
+          <table:table-cell table:number-columns-repeated="6"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell office:value-type="float" office:value="4" calcext:value-type="float">
+            <text:p>4</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="string" calcext:value-type="string">
+            <text:p>chicken</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="float" office:value="2" calcext:value-type="float">
+            <text:p>2</text:p>
+          </table:table-cell>
+          <table:table-cell table:number-columns-repeated="6"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell office:value-type="float" office:value="5" calcext:value-type="float">
+            <text:p>5</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="string" calcext:value-type="string">
+            <text:p>pig</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="float" office:value="3" calcext:value-type="float">
+            <text:p>3</text:p>
+          </table:table-cell>
+          <table:table-cell table:number-columns-repeated="6"/>
+        </table:table-row>
+        <table:table-row table:style-name="ro1">
+          <table:table-cell office:value-type="float" office:value="6" calcext:value-type="float">
+            <text:p>6</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="string" calcext:value-type="string">
+            <text:p>turkey</text:p>
+          </table:table-cell>
+          <table:table-cell office:value-type="float" office:value="1000" calcext:value-type="float">
+            <text:p>1000</text:p>
+          </table:table-cell>
+          <table:table-cell table:number-columns-repeated="6"/>
         </table:table-row>
       </table:table>
       <table:named-expressions/>
