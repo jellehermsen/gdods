@@ -75,5 +75,33 @@ gdunzip.gd from the same directory gdods.gd resides.
 | bool                             | load(String path)      |
 | EmptyCell, TextCell or ImageCell | get_cell(int sheet_nr, int row_nr, int column_nr) |
 | EmptyCell, TextCell or ImageCell | get_cell_by_name(int sheet_nr, String pos) |
-| array, or false                  | to_dictarray(int sheet_nr, int header_row) |
-|
+| Array, or false                  | to_dictarray(int sheet_nr, int header_row) |
+
+### Member function description
+
+- bool **load**(String path)
+
+Tries to load an ODS file with a given path. Returns false if it failed
+loading the ods, or true if it was successfull.
+
+- *Cell* **get_cell**(int sheet_nr, int row_nr, int column_nr)
+
+Given a sheet number, row number and column number
+this method will return this cell's value, this
+can either be a EmptyCell, TextCell or ImageCell instance.
+If the cell can't be found it will return an EmptyCell
+NB: numbering starts at 0
+
+- *Cell* **get_cell_by_name**(int sheet_nr, int pos)
+
+Return a cell by giving its name (i.e A1, D100).
+Returns an empty cell if the cell can't be found, or if the input is incorrect.
+
+- *Array* **to_dictarray**(int sheet_nr, int header_row)
+
+If your sheet has a header row, you can use this function to transform all the
+rows beneath the header row into a array of dicts. The header row will be used
+as dictionary keys.  
+This function returns false if the sheet denoted by
+sheet_nr or the header_row can't be found.
+
