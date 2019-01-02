@@ -77,6 +77,12 @@ gdunzip.gd from the same directory gdods.gd resides.
 | EmptyCell, TextCell or ImageCell | get_cell_by_name(int sheet_nr, String pos) |
 | Array, or false                  | to_dictarray(int sheet_nr, int header_row) |
 
+### Constants
+
+- EMPTY_CELL = 0
+- TEXT_CELL = 1
+- IMAGE_CELL = 2
+
 ### Member function description
 
 - bool **load**(String path)
@@ -90,6 +96,7 @@ Given a sheet number, row number and column number
 this method will return this cell's value, this
 can either be a EmptyCell, TextCell or ImageCell instance.
 If the cell can't be found it will return an EmptyCell
+
 NB: numbering starts at 0
 
 - *Cell* **get_cell_by_name**(int sheet_nr, int pos)
@@ -105,3 +112,13 @@ as dictionary keys.
 This function returns false if the sheet denoted by
 sheet_nr or the header_row can't be found.
 
+### Inner classes
+
+Gdods has 3 inner classes that are used for cell types: **TextCell**,
+**ImageCell**, **EmptyCell**. Each of those has a to_string() function, and you can check the type
+of the class by comparing the "type" attribute to one of the gdods' constants
+(EMPTY_CELL / TEXT_CELL / IMAGE_CELL).
+
+You can get the image path from **ImageCell** by using the *image_path*
+attribute, and you can load the image by calling the *load_image* function with
+no arguments. This will return either **false** or an Image instance.
