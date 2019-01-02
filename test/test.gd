@@ -1,7 +1,7 @@
 extends SceneTree
 
 func _init():
-    var gdods = load('res://src/gdods.gd').new()
+    var gdods = load('res://addons/gdods/gdods.gd').new()
     var loaded = gdods.load('res://test/test.ods')
 
     if !loaded:

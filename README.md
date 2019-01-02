@@ -16,9 +16,9 @@ bunch of xml's and other assets wrapped in a zip).
 Using gdods
 -----------
 - Grab
-  [gdunzip.gd](https://raw.githubusercontent.com/jellehermsen/gdods/master/src/gdunzip.gd)
+  [gdunzip.gd](https://raw.githubusercontent.com/jellehermsen/gdods/master/addons/gdods/gdunzip.gd)
   and
-  [gdods.gd](https://raw.githubusercontent.com/jellehermsen/gdods/master/src/gdods.gd)
+  [gdods.gd](https://raw.githubusercontent.com/jellehermsen/gdods/master/addons/gdods/gdods.gd)
   and put them in the same folder in your Godot project.
 - Make an instance, load a spreadsheet and start getting the data:
 
@@ -26,7 +26,7 @@ Example code
 ------------
 ```gdscript
 # Create a gdods instance
-var gdods = load('res://PATH_TO_GDODS/gdods.gd').new()
+var gdods = load('res://addons/gdods/gdods.gd').new()
 
 # Load an ODS file
 var loaded = gdods.load('res://test/test.ods')
