@@ -272,7 +272,7 @@ func _parse_cell():
     if !has_contents:
         return EmptyCell.new()
     if image_path != '':
-        return ImageCell.new(self._gdunzip, image_path)
+        return ImageCell.new(image_path, self._gdunzip)
     else:
         return TextCell.new(text_value)
 
@@ -310,8 +310,25 @@ class ImageCell:
         self._gdunzip = gdunzip
         self.image_path = image_path
 
+    # Tries to get the image from the ODS file, and return it.
+    # Returns false on failure.
     func load_image():
-        pass
+        var uncompressed = self._gdunzip.uncompress(self.image_path)
+        if !uncompressed:
+            return false
+        var image = Image.new()
+        var file_parts = self.image_path.to_lower().split('.')
+        var extension = file_parts[-1]
+
+        if extension == 'png':
+            image.load_png_from_buffer(uncompressed)
+            return image
+
+        if extension == 'jpg' || extension == 'jpeg':
+            image.load_jpg_from_buffer(uncompressed)
+            return image
+
+        return false
 
     func to_string():
         return '[' + image_path + ']'
