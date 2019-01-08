@@ -38,6 +38,13 @@ func _init():
         else:
             _success('Got value from dictarray')
 
+        if dict[6]['image']:
+            var tmp_image = dict[6]['image'].load_image()
+            if tmp_image.get_width() == 447:
+                _success('Loaded image through dictionary')
+            else:
+                _fail('Failed loading image through dictionary')
+
     var image = gdods.get_cell_by_name(0, 'A7').load_image()
     if !image:
         _fail('Failed to load image from sheet')

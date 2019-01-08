@@ -143,7 +143,10 @@ func to_dictarray(sheet_nr, header_row):
             if row_length <= col:
                 item[title] = EmptyCell.new()
             else:
-                item[title] = row[col].to_string()
+                if row[col].type == IMAGE_CELL:
+                    item[title] = row[col]
+                else:
+                    item[title] = row[col].to_string()
             col += 1
         result.append(item)
     return result
