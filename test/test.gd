@@ -1,14 +1,19 @@
 extends SceneTree
 
 func _init():
+    _test()
+    _test_multiple_sheets()
+    quit()
+
+func _test():
     var gdods = load('res://addons/gdods/gdods.gd').new()
     var loaded = gdods.load('res://test/test.ods')
 
     if !loaded:
-        _fail('Could not load ODS file')
+        _fail('Could not load ODS file "test.ods"')
         return quit()
 
-    _success('Loaded ODS file')
+    _success('Loaded ODS file "test.ods"')
 
     var cell = gdods.get_cell(0, 2, 1)
     if !cell:
@@ -55,7 +60,16 @@ func _init():
         else:
             _fail('Image size wrong')
 
-    quit()
+func _test_multiple_sheets():
+    var gdods = load('res://addons/gdods/gdods.gd').new()
+    var loaded = gdods.load('res://test/test_multiple_sheets.ods')
+
+    if !loaded:
+        _fail('Could not load ODS file "test_multiple_sheets.ods"')
+        return quit()
+
+    _success('Loaded ODS file "test_multiple_sheets.ods"')
+
 
 func _success(text):
     print(_green_text('✓') + ' ' + text)
